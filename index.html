@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Basic SEO -->
+  <title>Sholehuddin Khairy — PHPin</title>
+  <meta name="description" content="Sholehuddin Khairy — Pengembang muda, pembuat KYRT Framework. Menyediakan layanan pembuatan framework, integrasi CDN, optimasi asset, dan konsultasi teknis. Hubungi via GitHub untuk demo & penawaran." />
+  <meta name="keywords" content="KYRT, zFecth, CDN, frontend, developer, optimasi asset, javascript, css, npm, github" />
+  <link rel="canonical" href="https://khairyk.github.io/">
+
+  <!-- Robots -->
+  <meta name="robots" 
+      content="index, follow, 
+      noodp, noydir, 
+      max-snippet:-1, 
+      max-image-preview:large, 
+      max-video-preview:-1, 
+      notranslate, 
+      noarchive, 
+      nosnippet">
+
+  <meta name="googlebot" 
+      content="index, follow, 
+      max-snippet:-1, 
+      max-image-preview:large, 
+      max-video-preview:-1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sholehuddin Khairy — KYRT & zFecth Services" />
+  <meta property="og:description" content="Pengembang muda & pembuat KYRT Framework. Layanan: framework, CDN, optimasi asset, publikasi npm, dan konsultasi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khairyk.github.io/" />
+  <meta property="og:image" content="https://kyrt.my.id/assets/kyrt_logo.jpg" />
+  <meta property="og:image:alt" content="KYRT Logo" />
+
+  <!-- Mobile / PWA -->
+  <meta name="theme-color" content="#3B82F6" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="https://kyrt.my.id/assets/kyrt-icon-logo.png" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://kyrt.my.id" crossorigin>
+  <link rel="preconnect" href="https://npmcdn.kyrt.my.id" crossorigin>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://npmcdn.kyrt.my.id/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery (user requested) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+  <!-- Bootstrap Bundle JS (defer) -->
+  <script src="https://npmcdn.kyrt.my.id/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sholehuddin Khairy",
+    "url": "https://khairyk.github.io/",
+    "sameAs": [
+      "https://github.com/KhairyK",
+      "https://kyrt.my.id"
+    ],
+    "image": "https://kyrt.my.id/assets/kyrt_logo.jpg",
+    "jobTitle": "Frontend Developer & Framework Author",
+    "description": "Pengembang muda, pembuat KYRT Framework. Layanan: pembuatan framework, CDN, optimasi asset, integrasi npm/CDN, dan konsultasi teknis."
+  }
+  </script>
+
+  <style>
+    :root{
+      --primary:#3B82F6;
+      --muted:#6b7280;
+      --card-radius:12px;
+      --card-padding:14px;
+    }
+
+    html,body{height:100%}
+    body{
+      background:#f8fafc;
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Skip link (accessibility) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: #111827;
+      color: #fff;
+      border-radius: 6px;
+      z-index: 9999;
+    }
+
+    /* Logo (images) - keep grayscale but allow reveal on hover */
+    .service-logo {
+      width: auto;
+      height: auto;
+      max-width: 96px;
+      max-height: 96px;
+      object-fit: contain;
+      filter: grayscale(100%) contrast(.95) brightness(.95);
+      transition: filter .25s ease, transform .18s ease;
+      border-radius: var(--card-radius);
+      background: #fff;
+      padding:8px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+      display:block;
+    }
+
+    /* Card box: auto size (remove forced equal-height) */
+    .service-card {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      transition: transform .18s ease, box-shadow .18s ease;
+      background: #fff;
+    }
+
+    .service-card .card-body {
+      display:flex;
+      gap:1rem;
+      align-items:center;
+      padding: var(--card-padding);
+    }
+
+    /* Optional: reveal color on hover for logo only */
+    .service-card:hover .service-logo { filter: none; transform: translateY(-4px); }
+
+    /* small card title */
+    .service-card .card-title { margin-bottom:0.25rem; font-size:1rem; font-weight:600; }
+
+    /* hero */
+    .hero {
+      background: linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.03));
+      border-radius:12px;
+      padding:22px;
+    }
+
+    .badge-accent {
+      background: linear-gradient(90deg,var(--primary),#6366f1);
+      color:white;
+      border-radius:999px;
+      padding:6px 12px;
+      font-weight:600;
+      font-size:.875rem;
+    }
+
+    footer { color:var(--muted); font-size:.9rem; }
+
+    /* responsive tweaks */
+    @media (max-width:576px){
+      .service-logo { max-width:72px; max-height:72px; }
+      .service-card .card-body { gap:0.75rem; padding:12px; }
+    }
+
+    /* small visual polish */
+    .nav-brand-img { border-radius:8px; filter:grayscale(100%); }
+    .container h1 { font-weight:700; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img src="https://kyrt.my.id/assets/kyrt-icon-logo.png" alt="KYRT" width="36" height="36" class="nav-brand-img">
+        <span class="fw-bold">KhairyK</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Pelayanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="container my-5">
+    <!-- HERO -->
+    <section class="hero mb-4">
+      <div class="row align-items-center g-3">
+        <div class="col-md-8">
+          <h1 class="display-6 mb-2">Sholehuddin Khairy</h1>
+          <p class="lead mb-2">Pengembang muda — pembuat <span class="badge-accent">KYRT Icon</span>. Spesialis: integrasi CDN, tooling NPM/CDN, dan library frontend kecil seperti <strong>zFecth</strong>.</p>
+          <p class="text-muted mb-0">Saya menyediakan layanan pembuatan framework, deployment CDN, optimisasi asset, dan konsultasi teknis untuk website & aplikasi web.</p>
+        </div>
+
+        <div class="col-md-4 text-md-end text-center">
+          <img src="https://kyrt.my.id/assets/kyrt_logo.jpg" alt="KYRT Logo" class="service-logo" loading="lazy" width="120" height="120">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mb-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div>
+            <h4 class="card-title">Tentang Saya</h4>
+            <p class="card-text">Hai! Saya <strong>Sholehuddin Khairy</strong>, programmer muda yang fokus pada HTML, JS, dan PHP. Pembuat KYRT Framework dan tooling seperti zFecth. Saya membuat solusi ringan, cepat, dan mudah diintegrasikan.</p>
+            <p class="mb-0"><strong>Keahlian:</strong> Frontend, integrasi CDN, optimasi asset, pembuatan library (UMD/ESM), dan automasi deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Pelayanan</h4>
+      </div>
+
+      <div class="row g-3">
+        <!-- KYRT Framework -->
+        <div class="col-md-4">
+          <div class="card service-card card-auto shadow-sm" role="region" aria-label="KYRT Framework">
+            <div class="card-body">
+              <img class="service-logo" src="https://kyrt.my.id/assets/kyrt_logo.jpg" alt="KYRT Framework logo" loading="lazy">
+              <div>
+                <h5 class="card-title">KYRT Framework</h5>
+                <p class="mb-2 text-muted small">Pembuatan dan kustomisasi framework CSS/komponen, dokumentasi, dan integrasi CDN.</p>
+                <button class="btn btn-outline-primary btn-sm open-why" data-service="KYRT Framework" aria-expanded="false">Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KYRT CDN -->
+        <div class="col-md-4">
+          <div class="card service-card card-auto shadow-sm" role="region" aria-label="KYRT CDN">
+            <div class="card-body">
+              <img class="service-logo" src="https://kyrt.my.id/assets/cdn_logo.jpg" alt="KYRT CDN logo" loading="lazy">
+              <div>
+                <h5 class="card-title">KYRT CDN</h5>
+                <p class="mb-2 text-muted small">Sistem CDN untuk distribusi asset (js/css/img) + header cache dan fallback otomatis.</p>
+                <button class="btn btn-outline-primary btn-sm open-why" data-service="KYRT CDN" aria-expanded="false">Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- zFecth -->
+        <div class="col-md-4">
+          <div class="card service-card card-auto shadow-sm" role="region" aria-label="zFecth Integration">
+            <div class="card-body">
+              <img class="service-logo" src="https://kyrt.my.id/assets/zfecth.jpg" alt="zFecth logo" loading="lazy">
+              <div>
+                <h5 class="card-title">zFecth Integration</h5>
+                <p class="mb-2 text-muted small">Integrasi zFecth untuk streaming, token handling, dan fetch wrapper modern.</p>
+                <button class="btn btn-outline-primary btn-sm open-why" data-service="zFecth Integration" aria-expanded="false">Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NPM CDN -->
+        <div class="col-md-4">
+          <div class="card service-card card-auto shadow-sm" role="region" aria-label="NPM CDN">
+            <div class="card-body">
+              <img class="service-logo" src="https://kyrt.my.id/assets/npmcdn.png" alt="NPM CDN logo" loading="lazy">
+              <div>
+                <h5 class="card-title">Paket & CDN (npmcdn)</h5>
+                <p class="mb-2 text-muted small">Penerbitan paket npm dan integrasi auto CDN (jsDelivr / npmcdn).</p>
+                <button class="btn btn-outline-primary btn-sm open-why" data-service="NPM / npmcdn" aria-expanded="false">Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Dev -->
+        <div class="col-md-4">
+          <div class="card service-card card-auto shadow-sm" role="region" aria-label="Custom Dev">
+            <div class="card-body">
+              <img class="service-logo" src="https://kyrt.my.id/assets/kyrt-icon-logo.png" alt="KYRT Icon logo" loading="lazy">
+              <div>
+                <h5 class="card-title">Custom Dev & Konsultasi</h5>
+                <p class="mb-2 text-muted small">Konsultasi deployment, automasi CI/CD, atau fitur custom sesuai kebutuhan proyekmu.</p>
+                <button class="btn btn-outline-primary btn-sm open-why" data-service="Konsultasi" aria-expanded="false">Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">Kontak</h4>
+          <p class="card-text">Tertarik kerja sama atau mau demo? Hubungi saya via:</p>
+          <ul>
+            <li>GitHub: <a href="https://github.com/KhairyK" target="_blank" rel="noopener">github.com/KhairyK</a></li>
+            <li>Website: <a href="https://kyrt.my.id" target="_blank" rel="noopener">kyrt.my.id</a></li>
+          </ul>
+
+          <div class="mt-3">
+            <button id="btnContact" class="btn btn-primary" aria-label="Minta penawaran">Minta Penawaran</button>
+            <span class="ms-3 text-muted small">atau kirim issue / PR di GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4">
+    <div class="container text-center">
+      <div>© <strong>Sholehuddin Khairy</strong> — KYRT • PHPin</div>
+    </div>
+  </footer>
+
+  <!-- Modal untuk detail layanan -->
+  <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detail Layanan</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <p id="serviceDesc">Memuat...</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <a id="contactNow" class="btn btn-primary" href="https://github.com/KhairyK" target="_blank" rel="noopener">Hubungi via GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // service descriptions
+    const serviceDetails = {
+      "KYRT Framework": "Pengembangan & kustomisasi KYRT CSS framework, dokumentasi, dan komponen UI. Termasuk bundling dan optimasi untuk CDN.",
+      "KYRT CDN": "Setup KYRT CDN: cache headers, fallback origin, dan routing untuk distribusi cepat asset statis.",
+      "zFecth Integration": "Integrasi zFecth untuk kebutuhan streaming, otentikasi token, dan fetch wrapper pada aplikasi real-time.",
+      "NPM / npmcdn": "Membantu publikasi paket npm dan konfigurasi agar paket Anda dapat diakses via CDN (jsDelivr / npmcdn).",
+      "Konsultasi": "Sesi konsultasi teknis, audit performa, atau solusi arsitektur untuk proyek web Anda."
+    };
+
+    // Wait until DOM and bootstrap loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // jQuery handlers (still available)
+      $(function(){
+        $(".open-why").on("click", function(){
+          const key = $(this).data("service");
+          const desc = serviceDetails[key] || "Deskripsi belum tersedia.";
+          $("#serviceModal .modal-title").text(key);
+          $("#serviceDesc").text(desc);
+          let modal = new bootstrap.Modal(document.getElementById('serviceModal'));
+          modal.show();
+        });
+
+        $("#btnContact").on("click", function(){
+          window.open("https://github.com/KhairyK", "_blank");
+        });
+
+        // Smooth scroll for nav links
+        $('a.nav-link[href^="#"]').on('click', function(e){
+          e.preventDefault();
+          const target = $(this).attr('href');
+          if (target && $(target).length) {
+            $('html, body').animate({ scrollTop: $(target).offset().top - 70 }, 400);
+          }
+        });
+      });
+
+      // Enable bootstrap tooltips (if you add any)
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.forEach(function (el) { new bootstrap.Tooltip(el); });
+    });
+  </script>
+</body>
+</html>
