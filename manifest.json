@@ -1,0 +1,23 @@
+{
+  "name": "Sholehuddin Khairy — PHPin",
+  "short_name": "KhairyK",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "description": "Layanan pembuatan KYRT Framework, integrasi CDN, optimasi asset, publikasi npm, dan konsultasi teknis oleh Sholehuddin Khairy.",
+  "icons": [
+    {
+      "src": "https://kyrt.my.id/assets/kyrt_logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://kyrt.my.id/assets/kyrt_logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
