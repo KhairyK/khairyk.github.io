@@ -1,1 +1,0 @@
-# khairyk.github.io
