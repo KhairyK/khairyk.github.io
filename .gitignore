@@ -1,0 +1,8 @@
+# THIS USING GitHub GITIGNORE TEMPLATE
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+/vendor
+Gemfile.lock
